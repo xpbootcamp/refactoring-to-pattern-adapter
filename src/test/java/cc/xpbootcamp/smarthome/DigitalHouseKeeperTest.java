@@ -40,4 +40,15 @@ class DigitalHouseKeeperTest {
         assertTrue(airCondition.isOn());
     }
 
+    @Test
+    void should_turn_off_air_condition_when_host_leaves_home(){
+        AirCondition airCondition = new AirCondition();
+        DigitalHouseKeeper digitalHouseKeeper = new DigitalHouseKeeper();
+        digitalHouseKeeper.setAirCondition(airCondition);
+
+        digitalHouseKeeper.hostLeavesHome();
+
+        assertFalse(airCondition.isOn());
+    }
+
 }

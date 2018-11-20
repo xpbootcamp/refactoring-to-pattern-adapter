@@ -22,6 +22,12 @@ public class DigitalHouseKeeper {
     }
 
     public void hostLeavesHome() {
-        light.turnOff();
+        if (light != null) {
+            light.turnOff();
+        }
+        if (airCondition != null){
+            airCondition.turnTo(-1);
+        }
+
     }
 }
