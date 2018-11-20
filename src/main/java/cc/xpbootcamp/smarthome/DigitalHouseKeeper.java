@@ -13,21 +13,36 @@ public class DigitalHouseKeeper {
     }
 
     public void hostArrivesHome() {
-        if (light != null) {
-            light.turnOn();
-        }
-        if (airCondition != null){
-            airCondition.turnTo(26);
-        }
+        turnOnLight();
+        turnOnAirCondition();
     }
 
     public void hostLeavesHome() {
+        turnOffLight();
+        turnOffAirCondition();
+    }
+
+    private void turnOffAirCondition() {
+        if (airCondition != null){
+            airCondition.turnOff();
+        }
+    }
+
+    private void turnOffLight() {
         if (light != null) {
             light.turnOff();
         }
-        if (airCondition != null){
-            airCondition.turnTo(-1);
-        }
+    }
 
+    private void turnOnAirCondition() {
+        if (airCondition != null){
+            airCondition.turnOn();
+        }
+    }
+
+    private void turnOnLight() {
+        if (light != null) {
+            light.turnOn();
+        }
     }
 }
