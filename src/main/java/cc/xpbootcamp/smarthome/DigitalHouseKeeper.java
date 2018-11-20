@@ -1,48 +1,24 @@
 package cc.xpbootcamp.smarthome;
 
 public class DigitalHouseKeeper {
-    private Light light;
-    private AirCondition airCondition;
+    private final LightAdapter lightAdapter = new LightAdapter();
+    private final AirConditionAdapter airConditionAdapter = new AirConditionAdapter();
 
     public void setLight(Light light) {
-        this.light = light;
+        this.lightAdapter.light = light;
     }
 
     public void setAirCondition(AirCondition airCondition) {
-        this.airCondition = airCondition;
+        this.airConditionAdapter.airCondition = airCondition;
     }
 
     public void hostArrivesHome() {
-        turnOnLight();
-        turnOnAirCondition();
+        lightAdapter.turnOnLight();
+        airConditionAdapter.turnOnAirCondition();
     }
 
     public void hostLeavesHome() {
-        turnOffLight();
-        turnOffAirCondition();
-    }
-
-    private void turnOffAirCondition() {
-        if (airCondition != null){
-            airCondition.turnOff();
-        }
-    }
-
-    private void turnOffLight() {
-        if (light != null) {
-            light.turnOff();
-        }
-    }
-
-    private void turnOnAirCondition() {
-        if (airCondition != null){
-            airCondition.turnOn();
-        }
-    }
-
-    private void turnOnLight() {
-        if (light != null) {
-            light.turnOn();
-        }
+        lightAdapter.turnOffLight();
+        airConditionAdapter.turnOffAirCondition();
     }
 }
