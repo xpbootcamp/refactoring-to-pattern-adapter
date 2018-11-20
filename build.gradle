@@ -17,8 +17,12 @@ test {
         events "passed", "skipped", "failed"
         afterSuite { desc, result ->
             if (!desc.parent) {
-                def output = " Results: ${result.resultType} (${result.testCount} Tests, ${result.successfulTestCount} Successes, ${result.failedTestCount} Failures, ${result.skippedTestCount} Skipped) "
-                println('\n' + ('-' * output.length()) + '\n' + output  + '\n' + ('-' * output.length()))
+                def output = " Result: ${result.resultType} " +
+                        "(${result.testCount} Tests, " +
+                        "${result.successfulTestCount} Successes, " +
+                        "${result.failedTestCount} Failures, " +
+                        "${result.skippedTestCount} Skipped) "
+                println('\n' + ('-' * output.length()) + '\n' + output + '\n' + ('-' * output.length()))
             }
         }
     }
@@ -29,10 +33,10 @@ def JUNIT5_PLATFORM_VERSION = '1.3.0'
 
 
 dependencies {
-    testCompile  "org.junit.jupiter:junit-jupiter-api:${JUNIT5_API_VERSION}"
-    testCompile  "org.junit.jupiter:junit-jupiter-engine:${JUNIT5_API_VERSION}"
-    testCompile  "org.junit.jupiter:junit-jupiter-params:${JUNIT5_API_VERSION}"
-    testCompile  "org.junit.platform:junit-platform-launcher:${JUNIT5_PLATFORM_VERSION}"
+    testCompile "org.junit.jupiter:junit-jupiter-api:${JUNIT5_API_VERSION}"
+    testCompile "org.junit.jupiter:junit-jupiter-engine:${JUNIT5_API_VERSION}"
+    testCompile "org.junit.jupiter:junit-jupiter-params:${JUNIT5_API_VERSION}"
+    testCompile "org.junit.platform:junit-platform-launcher:${JUNIT5_PLATFORM_VERSION}"
     testCompile 'org.assertj:assertj-core:3.10.0'
     testCompile 'org.mockito:mockito-junit-jupiter:2.17.0'
 }
