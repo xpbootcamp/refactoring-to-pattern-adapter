@@ -1,24 +1,24 @@
 package cc.xpbootcamp.smarthome;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DigitalHouseKeeper {
-    private  Switchable lightAdapter = new LightAdapter();
-    private  Switchable airConditionAdapter = new AirConditionAdapter();
+    private List<Switchable> switches = new ArrayList<>();
 
     public void setLight(Light light) {
-        lightAdapter =  new LightAdapter(light);
+        switches.add(new LightAdapter(light));
     }
 
     public void setAirCondition(AirCondition airCondition) {
-        airConditionAdapter = new AirConditionAdapter(airCondition);
+        switches.add(new AirConditionAdapter(airCondition));
     }
 
     public void hostArrivesHome() {
-        lightAdapter.turnOn();
-        airConditionAdapter.turnOn();
+        switches.forEach(Switchable::turnOn);
     }
 
     public void hostLeavesHome() {
-        lightAdapter.turnOff();
-        airConditionAdapter.turnOff();
+        switches.forEach(Switchable::turnOff);
     }
 }
