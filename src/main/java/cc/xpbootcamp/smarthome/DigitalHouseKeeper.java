@@ -1,7 +1,6 @@
 package cc.xpbootcamp.smarthome;
 
 public class DigitalHouseKeeper {
-
     private Light light;
 
     public void setLight(Light light) {
@@ -12,4 +11,7 @@ public class DigitalHouseKeeper {
         light.turnOn();
     }
 
+    public void hostLeavesHome() {
+        light.turnOff();
+    }
 }
