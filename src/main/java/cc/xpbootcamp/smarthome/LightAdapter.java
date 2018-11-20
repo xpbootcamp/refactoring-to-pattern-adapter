@@ -7,10 +7,6 @@ public class LightAdapter implements Switchable {
         this.light = light;
     }
 
-    public LightAdapter() {
-
-    }
-
     @Override
     public void turnOff() {
         if (light != null) {

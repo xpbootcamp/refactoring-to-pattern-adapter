@@ -7,10 +7,6 @@ public class AirConditionAdapter implements Switchable {
         this.airCondition = airCondition;
     }
 
-    public AirConditionAdapter() {
-
-    }
-
     @Override
     public void turnOff() {
         if (airCondition != null) {

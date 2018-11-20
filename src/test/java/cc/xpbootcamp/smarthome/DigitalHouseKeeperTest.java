@@ -11,7 +11,7 @@ class DigitalHouseKeeperTest {
     void should_turn_on_light_when_host_arrives_home(){
         Light light = new Light();
         DigitalHouseKeeper digitalHouseKeeper = new DigitalHouseKeeper();
-        digitalHouseKeeper.setLight(light);
+        digitalHouseKeeper.addSwitch(new LightAdapter(light));
 
         digitalHouseKeeper.hostArrivesHome();
 
@@ -22,7 +22,7 @@ class DigitalHouseKeeperTest {
     void should_turn_off_light_when_host_leaves_home(){
         Light light = new Light();
         DigitalHouseKeeper digitalHouseKeeper = new DigitalHouseKeeper();
-        digitalHouseKeeper.setLight(light);
+        digitalHouseKeeper.addSwitch(new LightAdapter(light));
 
         digitalHouseKeeper.hostLeavesHome();
 
@@ -33,7 +33,7 @@ class DigitalHouseKeeperTest {
     void should_turn_on_air_condition_when_host_arrives_home(){
         AirCondition airCondition = new AirCondition();
         DigitalHouseKeeper digitalHouseKeeper = new DigitalHouseKeeper();
-        digitalHouseKeeper.setAirCondition(airCondition);
+        digitalHouseKeeper.addSwitch(new AirConditionAdapter(airCondition));
 
         digitalHouseKeeper.hostArrivesHome();
 
@@ -44,7 +44,7 @@ class DigitalHouseKeeperTest {
     void should_turn_off_air_condition_when_host_leaves_home(){
         AirCondition airCondition = new AirCondition();
         DigitalHouseKeeper digitalHouseKeeper = new DigitalHouseKeeper();
-        digitalHouseKeeper.setAirCondition(airCondition);
+        digitalHouseKeeper.addSwitch(new AirConditionAdapter(airCondition));
 
         digitalHouseKeeper.hostLeavesHome();
 

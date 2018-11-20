@@ -6,12 +6,8 @@ import java.util.List;
 public class DigitalHouseKeeper {
     private List<Switchable> switches = new ArrayList<>();
 
-    public void setLight(Light light) {
-        switches.add(new LightAdapter(light));
-    }
-
-    public void setAirCondition(AirCondition airCondition) {
-        switches.add(new AirConditionAdapter(airCondition));
+    public void addSwitch(Switchable switchable) {
+        switches.add(switchable);
     }
 
     public void hostArrivesHome() {
