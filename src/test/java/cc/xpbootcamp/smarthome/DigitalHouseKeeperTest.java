@@ -51,4 +51,15 @@ class DigitalHouseKeeperTest {
         assertFalse(airCondition.isOn());
     }
 
+    @Test
+    void should_turn_on_television_when_host_arrives_home(){
+        Television television = new Television();
+        DigitalHouseKeeper digitalHouseKeeper = new DigitalHouseKeeper();
+        digitalHouseKeeper.addSwitch(new TelevisionAdapter(television));
+
+        digitalHouseKeeper.hostArrivesHome();
+
+        assertTrue(television.isOn());
+    }
+
 }
