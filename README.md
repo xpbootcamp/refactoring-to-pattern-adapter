@@ -1,4 +1,4 @@
-# 重构到模式@Adapter模式
+# 重构到模式 @Adapter模式
  
 ## 开发环境
  - JDK1.8+
@@ -40,4 +40,5 @@
 `master`分支一共有6个tag（`SH1`，`SH2`，`SH3`，`SH4`，`SH5`，`SH6`），它们分别对应6个功能点。Clone下代码库之后，`checkout`到最开始的提交，一步一步往后面`checkout`即可查看所有步骤，`SH3`与`SH4`之间有6次Refactor的`commit`，如果觉得中间跨度太大，可以逐个查看这些`commit`。
 
 ## 参考资料
-- [jUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
+- [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
+- [Gradle 用户指南](https://docs.gradle.org/current/userguide/userguide.html)
