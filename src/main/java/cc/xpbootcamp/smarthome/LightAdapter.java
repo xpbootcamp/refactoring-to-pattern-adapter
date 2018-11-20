@@ -1,9 +1,14 @@
 package cc.xpbootcamp.smarthome;
 
 public class LightAdapter implements Switchable {
-    Light light;
+    private Light light;
+
+    public LightAdapter(Light light) {
+        this.light = light;
+    }
 
     public LightAdapter() {
+
     }
 
     @Override
