@@ -1,4 +1,6 @@
 # 重构到模式 @Adapter模式
+
+[![Build Status](https://travis-ci.org/xp-bootcamp/refactor-to-pattern-adapter.svg?branch=master)](https://travis-ci.org/xp-bootcamp/refactor-to-pattern-adapter)
  
 ## 开发环境
  - JDK1.8+
