@@ -13,12 +13,12 @@ public class DigitalHouseKeeper {
     }
 
     public void hostArrivesHome() {
-        lightAdapter.turnOnLight();
-        airConditionAdapter.turnOnAirCondition();
+        lightAdapter.turnOn();
+        airConditionAdapter.turnOn();
     }
 
     public void hostLeavesHome() {
-        lightAdapter.turnOffLight();
-        airConditionAdapter.turnOffAirCondition();
+        lightAdapter.turnOff();
+        airConditionAdapter.turnOff();
     }
 }

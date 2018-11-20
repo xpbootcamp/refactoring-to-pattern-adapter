@@ -1,18 +1,20 @@
 package cc.xpbootcamp.smarthome;
 
-public class LightAdapter {
+public class LightAdapter implements Switchable {
     Light light;
 
     public LightAdapter() {
     }
 
-    void turnOffLight() {
+    @Override
+    public void turnOff() {
         if (light != null) {
             light.turnOff();
         }
     }
 
-    void turnOnLight() {
+    @Override
+    public void turnOn() {
         if (light != null) {
             light.turnOn();
         }

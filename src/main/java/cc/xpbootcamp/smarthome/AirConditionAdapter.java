@@ -1,18 +1,20 @@
 package cc.xpbootcamp.smarthome;
 
-public class AirConditionAdapter {
+public class AirConditionAdapter implements Switchable {
     AirCondition airCondition;
 
     public AirConditionAdapter() {
     }
 
-    void turnOffAirCondition() {
+    @Override
+    public void turnOff() {
         if (airCondition != null) {
             airCondition.turnOff();
         }
     }
 
-    void turnOnAirCondition() {
+    @Override
+    public void turnOn() {
         if (airCondition != null) {
             airCondition.turnOn();
         }
