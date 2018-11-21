@@ -13,27 +13,27 @@
 邀请你作为该系统的软件架构师，你需要在最快时间内做出MVP，MVP功能如下:
 
 1. 开灯
-	- Give 供电正常
+	- Given 供电正常
 	- When 主人回家
 	- then 灯开启
 2. 关灯
-	- Give 供电正常
+	- Given 供电正常
 	- When 主人外出
 	- then 灯关闭
 3. 开空调
-	- Give 供电正常，
+	- Given 供电正常，
 	- When 主人回家，
 	- then 空调打开，温度设置为`26°`
 4. 关空调
-	- Give 供电正常
+	- Given 供电正常
 	- When 主人外出
 	- then 空调关闭，温度值用`-1`表示
 5. TV调频
-	- Give 供电正常
+	- Given 供电正常
 	- When 主人回家
 	- then TV打开，调频至`CCTV-5`
 6. 关TV
-	- Give 供电正常
+	- Given 供电正常
 	- When 主人外出
 	- then TV关闭
 
